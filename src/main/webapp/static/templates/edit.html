@@ -1,0 +1,41 @@
+<table class="hovered">
+    <thead>
+    <tr>
+        <th>Edit (#<%= p.get('id') %>) Shop</th>
+    </tr>
+    </thead>
+    <tr>
+        <td>
+            <h3>Code</h3>
+        <td>
+            <div class="input-control text span3">
+                <input type="text" class="with-helper" id="code" value="<%= p.get('code') %>"/>
+                <button class="helper"></button>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h3>Name</h3>
+        </td>
+        <td>
+            <div class="input-control text span3">
+                <input type="text" class="with-helper" id="name" value="<%= p.get('name') %>"/>
+                <button class="helper"></button>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="Update" class="update" />
+            <input type="button" value="Delete" class="delete" />
+            <input type="button" value="Cancel" class="cancel" />
+            <input type="hidden" id="id" value="<%= p.get('id') %>" />
+        </td>
+        <td>
+            <div class="error">
+
+            </div>
+        </td>
+    </tr>
+</table>

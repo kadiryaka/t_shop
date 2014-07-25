@@ -1,0 +1,33 @@
+<table class="hovered">
+    <thead>
+    <tr>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Online</th>
+        <th>Updated By</th>
+        <th>Updated Date</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% _.each(shops, function(shop){  %>
+    <tr>
+        <td><%= shop.get('code') %></td>
+        <td><%= shop.get('name') %></td>
+        <td>
+            <label class="input-control switch">
+                <input type="checkbox" disabled <%= shop.get('isOnline') ? 'checked="checked"' : '' %>>
+                <span class="helper"></span>
+            </label>
+        </td>
+        <td><%= shop.get('updatedBy') %></td>
+        <td><%= shop.get('updatedDate') %></td>
+        <td>
+            <a id="edit" href='#edit/<%= shop.get('id') %>' class="button">Edit</a>
+            <a id="download" href='api/shops/download/<%= shop.get('id') %>' class="button">Download (XML)</a>
+            <a id="delete" href='#delete/<%= shop.get('id') %>' class="button">Delete</a>
+        </td>
+    </tr>
+    <% }); %>
+    </tbody>
+</table>
